@@ -16,3 +16,9 @@ int main(int argc, char *argv[]) \
     ::testing::InitGoogleTest(&argc, argv); \
     return RUN_ALL_TESTS(); \
 }
+int expo(int a,int b){
+    if(b==0)return 1;
+    int c=expo(a,b/2);
+    if(b&1)return c*c*a;
+    return c*c;
+}
